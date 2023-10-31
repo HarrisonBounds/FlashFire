@@ -39,7 +39,7 @@ js = pygame.joystick.Joystick(0)
 
 # init variables
 throttle, steer = 0., 0.
-is_recording = False
+is_recording = True
 frame_counts = 0
 
 # init camera
