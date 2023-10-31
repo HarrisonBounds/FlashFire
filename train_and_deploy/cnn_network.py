@@ -46,7 +46,7 @@ class moderateNet(nn.Module):
         #(Input height - kernel height) / (stride + 1)
 
 
-        self.fc1 = nn.Linear(64*68*68, 64)
+        self.fc1 = nn.Linear(64*43*43, 64)
         self.fc2 = nn.Linear(64, 32)
         self.fc3 = nn.Linear(32, 2)
         self.relu = nn.ReLU()
