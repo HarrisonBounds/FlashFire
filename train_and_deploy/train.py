@@ -2,7 +2,6 @@
 # Train an autopilot for autonomous ground vehicle using
 # convolutional neural network and labeled images. 
 
-
 import os
 import sys
 import numpy as np
@@ -19,6 +18,7 @@ import cnn_network
 import cv2 as cv
 
 num_parameters = 4 #first parameter is the script name
+
 #Pass in command line arguments for path name 
 if len(sys.argv) != num_parameters:
     print(f'Python script needs {num_parameters} parameters!!!')
@@ -33,7 +33,6 @@ model_path = "/home/flashfire/FlashFire/models/"
 # Designate processing unit for CNN training
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using {DEVICE} device")
-
 
 class CustomImageDataset(Dataset): 
 

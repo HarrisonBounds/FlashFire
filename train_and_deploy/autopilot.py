@@ -19,6 +19,7 @@ if len(sys.argv) != num_parameters:
     print(f'Python script needs {num_parameters} parameters!!!')
 else:
     model_name = sys.argv[1]
+    
 # SETUP
 # load configs
 # init servo controller

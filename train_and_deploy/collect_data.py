@@ -14,7 +14,6 @@ from datetime import datetime
 
 from time import time
 
-
 # SETUP
 # dummy video driver
 os.environ["SDL_VIDEODRIVER"] = "dummy"
