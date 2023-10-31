@@ -57,7 +57,7 @@ start_time=datetime.now().strftime("%Y_%m_%d_%H_%M_")
 #Initialize motor and servo objects
 motor = PhaseEnableMotor(phase=19, enable=26)
 servo = Servo(24)
-center = 1.0
+center = 1.5
 offset = 0.5
 
 servo.value = center #start servo with wheels straight
