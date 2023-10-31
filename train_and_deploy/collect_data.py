@@ -70,7 +70,7 @@ try:
             frame_counts += 1
         for e in pygame.event.get():
             if e.type == pygame.JOYAXISMOTION:
-                throttle = (-js.get_axis(1)) * 0.9 # throttle input: -1: max forward, 1: max backward
+                throttle = (-js.get_axis(1)) * 1.0 # throttle input: -1: max forward, 1: max backward
                 steer = -js.get_axis(2)  # steer_input: -1: left, 1: right
             # elif e.type == pygame.JOYBUTTONDOWN:
             #     if pygame.joystick.Joystick(0).get_button(0):
