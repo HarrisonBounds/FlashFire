@@ -75,7 +75,7 @@ class megaNet(nn.Module):
         self.conv64 = nn.Conv2d(48, 64, kernel_size=(1, 1), stride=(1, 1))
 
 
-        self.fc1 = nn.Linear(64*34*34, 64)
+        self.fc1 = nn.Linear(64*22*22, 64)
         self.fc2 = nn.Linear(64, 32)
         self.fc3 = nn.Linear(32, 24)
         self.fc4 = nn.Linear(24, 16)
