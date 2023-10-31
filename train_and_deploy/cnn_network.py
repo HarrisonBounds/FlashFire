@@ -16,7 +16,7 @@ class simpleNet(nn.Module):
         #SPATIAL DIMENSION FORMULA (Assume no padding)
         #(Input height - kernel height) / stride) + 1
 
-        self.fc1 = nn.Linear(32*70*70, 64)
+        self.fc1 = nn.Linear(32*45*45, 64)
         self.fc2 = nn.Linear(64, 2)
         self.relu = nn.ReLU()
         self.flatten = nn.Flatten()
