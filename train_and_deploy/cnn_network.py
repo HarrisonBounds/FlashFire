@@ -75,17 +75,6 @@ class megaNet(nn.Module):
         self.conv64 = nn.Conv2d(48, 64, kernel_size=(1, 1), stride=(1, 1))
 
 
-        #SPATIAL DIMENSION FORMULA (Assume no padding)
-        #(Input height - kernel height) / (stride + 1)
-
-        #200x200
-        #((200 - 5) / 2) + 1 = 98
-        #((98 - 5) / 2) + 1 = 47
-        #((47 - 3)) / 2) + 1 = 23
-        #((23 - 2) / 1) + 1 = 22
-        #((22 - 1) / 1) + 1 = 22
-
-
         self.fc1 = nn.Linear(64*34*34, 64)
         self.fc2 = nn.Linear(64, 32)
         self.fc3 = nn.Linear(32, 24)
