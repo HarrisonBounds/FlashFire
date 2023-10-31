@@ -16,7 +16,7 @@ class simpleNet(nn.Module):
         #SPATIAL DIMENSION FORMULA (Assume no padding)
         #(Input height - kernel height) / stride) + 1
 
-        self.fc1 = nn.Linear(32*70*70, 64)
+        self.fc1 = nn.Linear(32*45*45, 64)
         self.fc2 = nn.Linear(64, 2)
         self.relu = nn.ReLU()
         self.flatten = nn.Flatten()
@@ -46,7 +46,7 @@ class moderateNet(nn.Module):
         #(Input height - kernel height) / (stride + 1)
 
 
-        self.fc1 = nn.Linear(64*68*68, 64)
+        self.fc1 = nn.Linear(64*43*43, 64)
         self.fc2 = nn.Linear(64, 32)
         self.fc3 = nn.Linear(32, 2)
         self.relu = nn.ReLU()
@@ -75,22 +75,11 @@ class megaNet(nn.Module):
         self.conv64 = nn.Conv2d(48, 64, kernel_size=(1, 1), stride=(1, 1))
 
 
-        #SPATIAL DIMENSION FORMULA (Assume no padding)
-        #(Input height - kernel height) / (stride + 1)
-
-        #200x200
-        #((200 - 5) / 2) + 1 = 98
-        #((98 - 5) / 2) + 1 = 47
-        #((47 - 3)) / 2) + 1 = 23
-        #((23 - 2) / 1) + 1 = 22
-        #((22 - 1) / 1) + 1 = 22
-
-
-        self.fc1 = nn.Linear(64*34*34, 64)
-        self.fc2 = nn.Linear(64, 32)
-        self.fc3 = nn.Linear(32, 24)
-        self.fc4 = nn.Linear(24, 16)
-        self.fc5 = nn.Linear(16, 2)
+        self.fc1 = nn.Linear(64*22*22, 128)
+        self.fc2 = nn.Linear(128, 64)
+        self.fc3 = nn.Linear(64, 32)
+        self.fc4 = nn.Linear(32, 24)
+        self.fc5 = nn.Linear(24, 2)
         self.relu = nn.ReLU()
         self.flatten = nn.Flatten()
 
@@ -122,7 +111,7 @@ class DonkeyNet(nn.Module):
         self.conv64_5 = nn.Conv2d(32, 64, kernel_size=(5, 5), stride=(2, 2))
         self.conv64_3 = nn.Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
 
-        self.fc1 = nn.Linear(64*30*30, 128)  # (64*30*30, 128) for 300x300 images
+        self.fc1 = nn.Linear(64*18*18, 128)  # (64*30*30, 128) for 300x300 images
         self.fc2 = nn.Linear(128, 128)
         self.fc3 = nn.Linear(128, 2)
         self.relu = nn.ReLU()
