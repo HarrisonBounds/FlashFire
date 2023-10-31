@@ -19,7 +19,7 @@ if len(sys.argv) != num_parameters:
     print(f'Python script needs {num_parameters} parameters!!!')
 else:
     model_name = sys.argv[1]
-    
+
 # SETUP
 # load configs
 # init servo controller
@@ -64,7 +64,7 @@ try:
         #     throttle = .999
         # elif throttle <= -1:
         #     throttle = -.999
-        motor.forward(throttle)
+        motor.forward(throttle) * 0.80
         servo.value = steer
         action = [steer, throttle]
         print(f"action: {action}")
